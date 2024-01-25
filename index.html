@@ -9,18 +9,30 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
-.w3-row-padding img {margin-bottom: 12px}
-/* Set the width of the sidebar to 120px */
-.w3-sidebar {width: 120px;background: #222;}
-/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-#main {margin-left: 120px}
-/* Remove margins from "page content" on small screens */
-@media only screen and (max-width: 600px) {#main {margin-left: 0}}
-.responsive {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
+  .w3-row-padding {
+    margin: 0 -16px;
+    display: flex;
+    flex-wrap: wrap; /* Allow the items to wrap to the next line */
+  }
+
+  .w3-half {
+    flex: 0 0 50%; /* Make each item take up half of the container width */
+    box-sizing: border-box;
+    padding: 0 16px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    max-height: 300px; /* Set a maximum height to prevent images from becoming too large */
+  }
+
+  @media screen and (max-width: 600px) {
+    .w3-half {
+      flex: 0 0 100%; /* Make each item take up the full container width on smaller screens */
+    }
+  }
 </style>
 </head>
 <body class="w3-black">
@@ -176,17 +188,17 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
     <!-- Grid for photos -->
     
-    <div class="w3-row-padding" style="margin:0 -16px; display: flex;">
-        <div class="w3-half">
-          <img src="Raviel Ivansia[1].jpg" style="width:100%; height: 300px;" alt="Description" class="responsive">
-        </div>
-        <div class="w3-half">
-          <img src="Raviel Ivansia[4].jpg" style="width:100%; height: 300px;" alt="Description" class="responsive">
-        </div>
-        <div class="w3-half">
-          <img src="Raviel Ivansia[6].jpg" style="width:100%; height: 300px;" alt="Description" class="responsive">
-        </div>
-      </div>
+    <div class="w3-row-padding">
+  <div class="w3-half">
+    <img class="responsive" src="Raviel Ivansia[1].jpg"  style="width:100%; height: 300px;">
+  </div>
+  <div class="w3-half">
+    <img class="responsive" src="Raviel Ivansia[4].jpg"  style="width:100%; height: 300px;">
+  </div>
+  <div class="w3-half">
+    <img class="responsive" src="Raviel Ivansia[6].jpg"  style="width:100%; height: 300px;">
+  </div>
+</div>
 
       <!--<div class="w3-half">
         <img src="/w3images/underwater.jpg" style="width:100%">
