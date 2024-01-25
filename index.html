@@ -9,30 +9,18 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
-   .w3-row-padding {
-    margin: 0 -16px;
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .w3-half {
-    flex: 0 0 50%;
-    box-sizing: border-box;
-    padding: 0 16px;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    max-height: 300px;
-  }
-
-  @media screen and (max-width: 768px) {
-    .w3-half {
-      flex: 0 0 100%;
-    }
-  }
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+.responsive {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 </style>
 </head>
 <body class="w3-black">
@@ -73,7 +61,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <div class="w3-padding-large" id="main">
   <!-- Header/Home -->
   <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-    <h1 class="w3-jumbo"><span class="w3-hide-small">I'm</span>Raga.</h1>
+    <h1 class="w3-jumbo"><span class="w3-hide-small">I'm</span> Muhammad Raga.</h1>
     <p>Hanya Murid Biasa</p>
     <img src="foto2.jpg" alt="boy" class="w3-image" width="992" height="1108">
   </header>
@@ -124,7 +112,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     </div>
 
     <button class="w3-button w3-light-gray w3-padding-large w3-section">
-            <a href="https://muhammadraga.github.io/Belajar_Ngoding/PROFILE.pdf" download style="text-decoration:none;color:inherit;">
+            <a href="" download style="text-decoration:none;color:inherit;">
             <i class="fa fa-download"></i> Download Resume
             </a>
         </button>
@@ -188,18 +176,18 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
     <!-- Grid for photos -->
     
-   
-  <div class="w3-row-padding">
-  <div class="w3-half">
-    <img class="responsive" src="Raviel Ivansia[1].jpg">
-  </div>
-  <div class="w3-half">
-    <img class="responsive" src="Raviel Ivansia[4].jpg">
-  </div>
-  <div class="w3-half">
-    <img class="responsive" src="Raviel Ivansia[6].jpg">
-  </div>
-</div>
+    <div class="w3-row-padding" style="margin:0 -16px; display: flex;">
+        <div class="w3-half">
+          <img src="Raviel Ivansia[1].jpg" style="width:100%; height: 300px;" alt="Description" class="responsive">
+        </div>
+        <div class="w3-half">
+          <img src="Raviel Ivansia[4].jpg" style="width:100%; height: 300px;" alt="Description" class="responsive">
+        </div>
+        <div class="w3-half">
+          <img src="Raviel Ivansia[6].jpg" style="width:100%; height: 300px;" alt="Description" class="responsive">
+        </div>
+      </div>
+
       <!--<div class="w3-half">
         <img src="/w3images/underwater.jpg" style="width:100%">
         <img src="/w3images/chef.jpg" style="width:100%">
